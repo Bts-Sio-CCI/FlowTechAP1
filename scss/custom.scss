@@ -1,12 +1,14 @@
-@import "../node_modules/bootstrap/scss/bootstrap";
-
+// Override Bootstrap variables
 $primary: #ffb525;
 
-$theme-colors: (
-	"primary": $primary,
-	"danger": $danger,
+@import "../node_modules/bootstrap/scss/_functions.scss";
+@import "../node_modules/bootstrap/scss/_variables.scss";
+
+// Ajout nouvelle couleur à bootstrap
+$custom-theme-colors: (
+	"altdark": #2b0505,
 );
 
-$custom-colors: (
-	"custom-color": rgb(153, 0, 122),
-);
+$theme-colors: map-merge($custom-theme-colors, $theme-colors);
+
+@import "../node_modules/bootstrap/scss/bootstrap";
