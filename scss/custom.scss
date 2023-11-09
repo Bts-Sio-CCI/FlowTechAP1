@@ -1,14 +1,42 @@
 // Override Bootstrap variables
-$primary: #ffb525;
+// $primary: #ffb525; --> Déclarée en nouvelle couleur
+$dark: #1e1e1e;
 
 @import "../node_modules/bootstrap/scss/_functions.scss";
 @import "../node_modules/bootstrap/scss/_variables.scss";
 
 // Ajout nouvelle couleur à bootstrap
 $custom-theme-colors: (
-	"altdark": #2b0505,
+	"flowtech": #ffb525,
+	//"gris": #1e1e1e,
 );
 
 $theme-colors: map-merge($custom-theme-colors, $theme-colors);
 
 @import "../node_modules/bootstrap/scss/bootstrap";
+
+.nav-link {
+	color: $dark;
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: magz;
+	src: url(../fonts/magz.otf);
+}
+
+.magz {
+	font-family: magz;
+	font-size: 1.5rem;
+}
+
+header {
+	min-height: 100vh;
+	background-color: $dark;
+}
+
+.header-gradient {
+	height: 20em;
+	background: rgb(255, 181, 37);
+	background: linear-gradient(180deg, rgba(255, 181, 37, 1) 0%, rgba(30, 30, 30, 0) 100%);
+}
