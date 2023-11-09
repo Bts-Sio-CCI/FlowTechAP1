@@ -37,6 +37,7 @@ header {
 
 .header-gradient {
 	height: 20em;
+	max-width: 100%;
 	background: rgb(255, 181, 37);
 	background: linear-gradient(180deg, rgba(255, 181, 37, 1) 0%, rgba(30, 30, 30, 0) 100%);
 }
