@@ -1,6 +1,7 @@
 // Override Bootstrap variables
 // $primary: #ffb525; --> Déclarée en nouvelle couleur
 $dark: #1e1e1e;
+$light: #efefef;
 
 @import "../node_modules/bootstrap/scss/_functions.scss";
 @import "../node_modules/bootstrap/scss/_variables.scss";
@@ -32,6 +33,7 @@ $theme-colors: map-merge($custom-theme-colors, $theme-colors);
 
 header {
 	min-height: 100vh;
+	max-height: auto;
 	background-color: $dark;
 }
 
@@ -40,4 +42,8 @@ header {
 	max-width: 100%;
 	background: rgb(255, 181, 37);
 	background: linear-gradient(180deg, rgba(255, 181, 37, 1) 0%, rgba(30, 30, 30, 0) 100%);
+}
+
+.btn {
+	border-radius: 1.5em;
 }
