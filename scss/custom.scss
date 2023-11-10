@@ -2,13 +2,14 @@
 // $primary: #ffb525; --> Déclarée en nouvelle couleur
 $dark: #1e1e1e;
 $light: #efefef;
+$flowtech: #ffb525;
 
 @import "../node_modules/bootstrap/scss/_functions.scss";
 @import "../node_modules/bootstrap/scss/_variables.scss";
 
 // Ajout nouvelle couleur à bootstrap
 $custom-theme-colors: (
-	"flowtech": #ffb525,
+	"flowtech": $flowtech,
 	//"gris": #1e1e1e,
 );
 
