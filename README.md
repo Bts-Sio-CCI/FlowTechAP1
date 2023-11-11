@@ -14,6 +14,20 @@ git clone https://github.com/Bts-Sio-CCI/FlowTech.git
 npm install -g sass
 ```
 
+## Utilisation
+
+### Compiler le SASS
+
+```shell
+sass --watch ./scss/custom.scss ./css/custom.css
+```
+
+ou utilisez la commande raccourci:
+
+```shell
+npm run csscompile
+```
+
 ## Technologies
 
 ### Frontend
