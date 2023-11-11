@@ -55,23 +55,3 @@ header {
 .righteous {
 	font-family: "Righteous", sans-serif;
 }
-
-.header-title-rgb {
-	font-size: 3rem;
-	font-family: "Bungee", sans-serif;
-	//position: absolute;
-	// background linear-gradient(90deg) with all color
-	background: linear-gradient(90deg, #ff00cc, #ffff00, #ff00f3, #0033ff, #0000ff, #ff00c4);
-	background-size: 400%;
-	-webkit-text-fill-color: transparent;
-	animation: animate 30s linear infinite;
-}
-
-@keyframes animate {
-	0% {
-		background-position: 0%;
-	}
-	100% {
-		background-position: 400%;
-	}
-}
