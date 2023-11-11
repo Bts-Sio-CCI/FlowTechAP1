@@ -1,6 +1,18 @@
 <img src="https://i.imgur.com/2wOMYmo.gif" />
 
-## Stats
+## Installation
+
+### Cloner le projet
+
+```shell
+git clone https://github.com/Bts-Sio-CCI/FlowTech.git
+```
+
+### Installer le compilateur SASS
+
+```shell
+npm install -g sass
+```
 
 ## Technologies
 
