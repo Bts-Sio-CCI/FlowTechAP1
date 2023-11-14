@@ -11970,6 +11970,12 @@ textarea.form-control-lg {
   background-color: #1e1e1e;
 }
 
+.header-shop {
+  min-height: 50vh;
+  max-height: auto;
+  background-color: #1e1e1e;
+}
+
 .header-gradient {
   height: 20em;
   max-width: 100%;

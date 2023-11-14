@@ -37,6 +37,12 @@ $theme-colors: map-merge($custom-theme-colors, $theme-colors);
 	background-color: $dark;
 }
 
+.header-shop {
+	min-height: 50vh;
+	max-height: auto;
+	background-color: $dark;
+}
+
 .header-gradient {
 	height: 20em;
 	max-width: 100%;
