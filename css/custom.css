@@ -11964,7 +11964,7 @@ textarea.form-control-lg {
   font-size: 1.5rem;
 }
 
-header {
+.header-index {
   min-height: 100vh;
   max-height: auto;
   background-color: #1e1e1e;

@@ -31,7 +31,7 @@ $theme-colors: map-merge($custom-theme-colors, $theme-colors);
 	font-size: 1.5rem;
 }
 
-header {
+.header-index {
 	min-height: 100vh;
 	max-height: auto;
 	background-color: $dark;
