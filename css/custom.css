@@ -11953,7 +11953,6 @@ textarea.form-control-lg {
 }
 .nav-link {
   color: #1e1e1e;
-  font-weight: bold;
 }
 
 @font-face {
@@ -11986,23 +11985,9 @@ header {
   font-family: "Righteous", sans-serif;
 }
 
-.header-title-rgb {
-  font-size: 3rem;
-  font-family: "Bungee", sans-serif;
-  background: linear-gradient(90deg, #ff00cc, #ffff00, #ff00f3, #0033ff, #0000ff, #ff00c4);
-  background-size: 400%;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  animation: animate 30s linear infinite reverse;
-}
-
-@keyframes animate {
-  0% {
-    background-position: 0%;
-  }
-  100% {
-    background-position: 400%;
-  }
+.header-text {
+  color: #fff;
+  text-shadow: 0 0 15px #fff, 0 0 30px #fff;
 }
 
 /*# sourceMappingURL=custom.css.map */

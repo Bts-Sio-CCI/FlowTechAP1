@@ -19,7 +19,6 @@ $theme-colors: map-merge($custom-theme-colors, $theme-colors);
 
 .nav-link {
 	color: $dark;
-	font-weight: bold;
 }
 
 @font-face {
@@ -54,4 +53,9 @@ header {
 
 .righteous {
 	font-family: "Righteous", sans-serif;
+}
+
+.header-text {
+	color: #fff;
+	text-shadow: 0 0 15px #fff, 0 0 30px #fff;
 }
