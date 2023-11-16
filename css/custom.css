@@ -11996,4 +11996,10 @@ textarea.form-control-lg {
   text-shadow: 0 0 15px #fff, 0 0 30px #fff;
 }
 
+.shop-card-img {
+  background-color: rgba(239, 239, 239, 0.2196078431);
+  border-radius: 5px 5px 15px 15px;
+  padding: 1.5em;
+}
+
 /*# sourceMappingURL=custom.css.map */

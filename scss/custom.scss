@@ -65,3 +65,9 @@ $theme-colors: map-merge($custom-theme-colors, $theme-colors);
 	color: #fff;
 	text-shadow: 0 0 15px #fff, 0 0 30px #fff;
 }
+
+.shop-card-img {
+	background-color: #efefef38;
+	border-radius: 5px 5px 15px 15px;
+	padding: 1.5em;
+}
