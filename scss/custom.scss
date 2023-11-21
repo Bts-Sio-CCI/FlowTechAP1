@@ -74,9 +74,5 @@ $theme-colors: map-merge($custom-theme-colors, $theme-colors);
   background-color: #efefef38;
   border-radius: 5px 5px 15px 15px;
   padding: 1.5em;
-}
-
-.card-prix {
-  font-size: 1.5rem;
-  font-weight: bold;
+  height: 100%;
 }
