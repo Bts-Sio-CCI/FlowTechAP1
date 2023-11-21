@@ -9,8 +9,8 @@ $flowtech: #ffb525;
 
 // Ajout nouvelle couleur à bootstrap
 $custom-theme-colors: (
-	"flowtech": $flowtech,
-	//"gris": #1e1e1e,
+  "flowtech": $flowtech,
+  //"gris": #1e1e1e,
 );
 
 $theme-colors: map-merge($custom-theme-colors, $theme-colors);
@@ -18,56 +18,65 @@ $theme-colors: map-merge($custom-theme-colors, $theme-colors);
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 .nav-link {
-	color: $dark;
+  color: $dark;
 }
 
 @font-face {
-	font-family: magz;
-	src: url(../fonts/magz.otf);
+  font-family: magz;
+  src: url(../fonts/magz.otf);
 }
 
 .magz {
-	font-family: magz;
-	font-size: 1.5rem;
+  font-family: magz;
+  font-size: 1.5rem;
 }
 
 .header-index {
-	min-height: 100vh;
-	max-height: auto;
-	background-color: $dark;
+  min-height: 100vh;
+  max-height: auto;
+  background-color: $dark;
 }
 
 .header-shop {
-	min-height: 50vh;
-	max-height: auto;
-	background-color: $dark;
+  min-height: 50vh;
+  max-height: auto;
+  background-color: $dark;
 }
 
 .header-gradient {
-	height: 20em;
-	max-width: 100%;
-	background: rgb(255, 181, 37);
-	background: linear-gradient(180deg, rgba(255, 181, 37, 1) 0%, rgba(30, 30, 30, 0) 100%);
+  height: 20em;
+  max-width: 100%;
+  background: rgb(255, 181, 37);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 181, 37, 1) 0%,
+    rgba(30, 30, 30, 0) 100%
+  );
 }
 
 .btn {
-	border-radius: 1.5em;
+  border-radius: 1.5em;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap"); // Righteous font
 @import url("https://fonts.googleapis.com/css2?family=Bungee&display=swap"); // Bungee font
 
 .righteous {
-	font-family: "Righteous", sans-serif;
+  font-family: "Righteous", sans-serif;
 }
 
 .header-text {
-	color: #fff;
-	text-shadow: 0 0 15px #fff, 0 0 30px #fff;
+  color: #fff;
+  text-shadow: 0 0 15px #fff, 0 0 30px #fff;
 }
 
 .shop-card-img {
-	background-color: #efefef38;
-	border-radius: 5px 5px 15px 15px;
-	padding: 1.5em;
+  background-color: #efefef38;
+  border-radius: 5px 5px 15px 15px;
+  padding: 1.5em;
+}
+
+.card-prix {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
