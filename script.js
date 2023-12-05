@@ -3,7 +3,7 @@ function calcul() {
 	var volume = parseFloat(document.getElementById("volume").value);
 
 	//variables
-	var zone = parseFloat(document.getElementById("zone").value);
+	var zone = parseFloat(document.getElementById("pc4070").value);
 	var isolation = parseFloat(document.getElementById("isolation").value);
 	var nord = parseFloat(document.getElementById("nord").checked ? document.getElementById("nord").value : 0);
 	var habitation = parseFloat(document.getElementById("habitation").value);
