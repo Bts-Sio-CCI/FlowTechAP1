@@ -146,3 +146,8 @@ $theme-colors: map-merge($custom-theme-colors, $theme-colors);
 		animation-timing-function: ease-out;
 	}
 }
+
+.mentionslegales a:link {
+	color: $flowtech;
+	text-decoration: underline;
+}

@@ -12076,5 +12076,9 @@ textarea.form-control-lg {
     animation-timing-function: ease-out;
   }
 }
+.mentionslegales a:link {
+  color: #ffb525;
+  text-decoration: underline;
+}
 
 /*# sourceMappingURL=custom.css.map */
