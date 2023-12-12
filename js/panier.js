@@ -74,20 +74,22 @@ function afficherArticlesPanier() {
 	// Effacez le contenu existant
 	corpsTableauPanier.innerHTML = "";
 
-	// Parcourez les articles du panier et affichez-les
+	// Parcourez tous les articles du panier et affichez-les
 	var sousTotal = 0;
 	articlesPanier.forEach(function (article, index) {
 		var ligne = corpsTableauPanier.insertRow();
 		var cellule1 = ligne.insertCell(0);
 		var cellule2 = ligne.insertCell(1);
 		var cellule3 = ligne.insertCell(2);
-		var cellule4 = ligne.insertCell(3); // Nouvelle cellule pour le bouton de suppression
 
 		cellule1.innerHTML = article.nom;
 		cellule2.innerHTML = article.prix.toFixed(2) + " €";
 		cellule3.innerHTML = article.quantite;
 
 		sousTotal += article.prix * article.quantite;
+
+		// Créez un conteneur (div) pour les boutons
+		var boutonsContainer = document.createElement("div");
 
 		// Ajoutez un bouton de suppression avec un gestionnaire d'événements
 		var boutonSupprimer = document.createElement("button");
@@ -97,7 +99,20 @@ function afficherArticlesPanier() {
 			supprimerArticle(index);
 		});
 
-		cellule4.appendChild(boutonSupprimer);
+		boutonsContainer.appendChild(boutonSupprimer);
+
+		// Ajoutez un bouton d'ajout de quantité avec un gestionnaire d'événements
+		var boutonAjouter = document.createElement("button");
+		boutonAjouter.innerHTML = "+";
+		boutonAjouter.className = "btn btn-primary btn-sm mx-2";
+		boutonAjouter.addEventListener("click", function () {
+			ajouterQuantite(index);
+		});
+
+		boutonsContainer.appendChild(boutonAjouter);
+
+		// Ajoutez le conteneur des boutons à la cellule
+		ligne.insertCell(3).appendChild(boutonsContainer);
 	});
 
 	// Affichez le sous-total
@@ -142,4 +157,50 @@ function confirmerCommande() {
 		// Votre logique ici, par exemple, rediriger l'utilisateur ou effectuer d'autres actions
 		window.location.href = "../pages/confirmation.html";
 	}
+}
+
+function ajouterQuantite(index) {
+	// Obtenez les articles du panier depuis localStorage
+	var articlesPanier = localStorage.getItem("articlesPanier");
+	articlesPanier = articlesPanier ? JSON.parse(articlesPanier) : [];
+
+	// Augmentez la quantité de l'article en fonction de l'index
+	articlesPanier[index].quantite += 1;
+
+	// Enregistrez les articles mis à jour dans localStorage
+	localStorage.setItem("articlesPanier", JSON.stringify(articlesPanier));
+
+	// Mettez à jour l'affichage du panier
+	afficherArticlesPanier();
+}
+
+function afficherDetailsCommande() {
+	var confirmationTableBody = document.getElementById("confirmation-tablebody");
+	var confirmationSubtotal = document.getElementById("confirmation-subtotal");
+
+	// Obtenez les articles du panier depuis localStorage
+	var articlesPanier = localStorage.getItem("articlesPanier");
+	articlesPanier = articlesPanier ? JSON.parse(articlesPanier) : [];
+
+	// Effacez le contenu existant
+	confirmationTableBody.innerHTML = "";
+
+	var sousTotal = 0;
+
+	// Parcourez les articles du panier pour afficher dans le tableau de confirmation
+	articlesPanier.forEach(function (article) {
+		var ligne = confirmationTableBody.insertRow();
+		var cellule1 = ligne.insertCell(0);
+		var cellule2 = ligne.insertCell(1);
+		var cellule3 = ligne.insertCell(2);
+
+		cellule1.innerHTML = article.nom;
+		cellule2.innerHTML = article.prix.toFixed(2) + " €";
+		cellule3.innerHTML = article.quantite;
+
+		sousTotal += article.prix * article.quantite;
+	});
+
+	// Affichez le sous-total dans la page de confirmation
+	confirmationSubtotal.innerHTML = sousTotal.toFixed(2);
 }
