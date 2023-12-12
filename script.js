@@ -1,5 +1,9 @@
 // script.js
 
+// script.js
+
+// ...
+
 function ajouterAuPanier(identifiantProduit) {
 	// Récupérez les détails du produit en fonction de l'identifiantProduit
 	var detailsProduit = getDetailsProduit(identifiantProduit);
@@ -8,19 +12,30 @@ function ajouterAuPanier(identifiantProduit) {
 	var articlesPanier = localStorage.getItem("articlesPanier");
 	articlesPanier = articlesPanier ? JSON.parse(articlesPanier) : [];
 
-	// Ajoutez le nouvel article au panier
-	articlesPanier.push({
-		id: identifiantProduit,
-		nom: detailsProduit.nom,
-		prix: detailsProduit.prix,
-		quantite: 1,
+	// Vérifiez si le produit est déjà dans le panier
+	var produitExistant = articlesPanier.find(function (article) {
+		return article.id === identifiantProduit;
 	});
+
+	if (produitExistant) {
+		// Si le produit existe déjà, augmentez simplement la quantité
+		produitExistant.quantite += 1;
+	} else {
+		// Sinon, ajoutez un nouvel article au panier
+		articlesPanier.push({
+			id: identifiantProduit,
+			nom: detailsProduit.nom,
+			prix: detailsProduit.prix,
+			quantite: 1,
+		});
+	}
 
 	// Enregistrez les articles mis à jour dans localStorage
 	localStorage.setItem("articlesPanier", JSON.stringify(articlesPanier));
 
 	// Optionnel : vous pouvez rediriger l'utilisateur vers la page du panier
 	window.location.href = "../pages/panier.html";
+	afficherArticlesPanier();
 }
 
 function getDetailsProduit(identifiantProduit) {
@@ -31,15 +46,15 @@ function getDetailsProduit(identifiantProduit) {
 			return { nom: "PC RTX 4070ti", prix: 1949.0 };
 		// Ajoutez des cas similaires pour les autres produits
 		case "pc2":
-			return { nom: "PC RTX 4070ti", prix: 1949.0 };
+			return { nom: "PC RTX 4050", prix: 1399.99 };
 		case "pc3":
-			return { nom: "PC RTX 4050", prix: 1.399 };
+			return { nom: "PC RTX 4060ti", prix: 1499.99 };
 		case "pc4":
-			return { nom: "PC RTX 4070ti", prix: 1949.0 };
+			return { nom: "PC RTX 4090", prix: 5999.99 };
 		case "pc5":
-			return { nom: "PC RTX 4070ti", prix: 1949.0 };
+			return { nom: "PC RTX 3070", prix: 1199.99 };
 		case "pc6":
-			return { nom: "PC RTX 4070ti", prix: 1949.0 };
+			return { nom: "PC RTX 3080", prix: 1349.99 };
 		default:
 			return { nom: "Produit inconnu", prix: 0.0 };
 	}
@@ -61,17 +76,28 @@ function afficherArticlesPanier() {
 
 	// Parcourez les articles du panier et affichez-les
 	var sousTotal = 0;
-	articlesPanier.forEach(function (article) {
+	articlesPanier.forEach(function (article, index) {
 		var ligne = corpsTableauPanier.insertRow();
 		var cellule1 = ligne.insertCell(0);
 		var cellule2 = ligne.insertCell(1);
 		var cellule3 = ligne.insertCell(2);
+		var cellule4 = ligne.insertCell(3); // Nouvelle cellule pour le bouton de suppression
 
 		cellule1.innerHTML = article.nom;
 		cellule2.innerHTML = article.prix.toFixed(2) + " €";
 		cellule3.innerHTML = article.quantite;
 
 		sousTotal += article.prix * article.quantite;
+
+		// Ajoutez un bouton de suppression avec un gestionnaire d'événements
+		var boutonSupprimer = document.createElement("button");
+		boutonSupprimer.innerHTML = "Supprimer";
+		boutonSupprimer.className = "btn btn-danger btn-sm";
+		boutonSupprimer.addEventListener("click", function () {
+			supprimerArticle(index);
+		});
+
+		cellule4.appendChild(boutonSupprimer);
 	});
 
 	// Affichez le sous-total
@@ -80,3 +106,40 @@ function afficherArticlesPanier() {
 
 // Appelez la fonction pour afficher les articles du panier lorsque la page du panier est chargée
 afficherArticlesPanier();
+
+// Fonction pour supprimer un article du panier
+function supprimerArticle(index) {
+	// Obtenez les articles du panier depuis localStorage
+	var articlesPanier = localStorage.getItem("articlesPanier");
+	articlesPanier = articlesPanier ? JSON.parse(articlesPanier) : [];
+
+	// Obtenez l'article en fonction de l'index
+	var article = articlesPanier[index];
+
+	// Décrémentez la quantité
+	if (article.quantite > 1) {
+		article.quantite -= 1;
+	} else {
+		// Si la quantité est égale à 1, supprimez l'article du panier
+		articlesPanier.splice(index, 1);
+	}
+
+	// Enregistrez les articles mis à jour dans localStorage
+	localStorage.setItem("articlesPanier", JSON.stringify(articlesPanier));
+
+	// Mettez à jour l'affichage du panier
+	afficherArticlesPanier();
+}
+// Ajoutez ceci à votre fonction de confirmation de commande (ajouterAuPanier par exemple)
+function confirmerCommande() {
+	// ... (votre code existant)
+
+	// Affichez un popup de confirmation
+	var confirmation = confirm("Confirmer la commande ?");
+
+	// Si l'utilisateur clique sur OK dans le popup, vous pouvez procéder à la suite de votre logique
+	if (confirmation) {
+		// Votre logique ici, par exemple, rediriger l'utilisateur ou effectuer d'autres actions
+		window.location.href = "../pages/confirmation.html";
+	}
+}
