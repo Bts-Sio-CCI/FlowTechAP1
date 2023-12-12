@@ -3,7 +3,7 @@ function calcul() {
 	var volume = parseFloat(document.getElementById("volume").value);
 
 	//variables
-	var zone = parseFloat(document.getElementById("pc4070").value);
+	var pc4070 = parseFloat(document.getElementById("pc4070").value);
 	var isolation = parseFloat(document.getElementById("isolation").value);
 	var nord = parseFloat(document.getElementById("nord").checked ? document.getElementById("nord").value : 0);
 	var habitation = parseFloat(document.getElementById("habitation").value);
@@ -11,12 +11,10 @@ function calcul() {
 	var altitude = parseFloat(document.getElementById("altitude").value);
 	var sdb = parseFloat(document.getElementById("sdb").checked ? document.getElementById("sdb").value : 0);
 
-	var resultatCalcul = (volume + zone + isolation + nord + habitation + temperature + altitude + sdb) / 0.18;
-
 	// Afficher le résultat
 	document.getElementById("resultatCalcul").innerText = "Résultat du calcul : " + resultatCalcul;
 }
 
-document.getElementById("calculButton").addEventListener("click", function () {
+document.getElementById("panier").addEventListener("click", function () {
 	calcul();
 });
