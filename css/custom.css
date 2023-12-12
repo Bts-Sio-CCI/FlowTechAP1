@@ -11976,6 +11976,12 @@ textarea.form-control-lg {
   background-color: #1e1e1e;
 }
 
+.header-25 {
+  min-height: 25vh;
+  max-height: auto;
+  background-color: #1e1e1e;
+}
+
 .header-gradient {
   height: 20em;
   max-width: 100%;
