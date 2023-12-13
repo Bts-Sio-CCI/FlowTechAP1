@@ -1,9 +1,3 @@
-// script.js
-
-// script.js
-
-// ...
-
 function ajouterAuPanier(identifiantProduit) {
 	// Récupérez les détails du produit en fonction de l'identifiantProduit
 	var detailsProduit = getDetailsProduit(identifiantProduit);
