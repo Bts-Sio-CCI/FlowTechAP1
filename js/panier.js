@@ -101,7 +101,7 @@ function afficherArticlesPanier() {
 		// Ajoutez un bouton d'ajout de quantité avec un gestionnaire d'événements
 		var boutonAjouter = document.createElement("button");
 		boutonAjouter.innerHTML = "+";
-		boutonAjouter.className = "btn btn-primary btn-sm mx-2";
+		boutonAjouter.className = "btn btn-primary btn-sm mx-2 mt-1";
 		boutonAjouter.addEventListener("click", function () {
 			ajouterQuantite(index);
 		});
