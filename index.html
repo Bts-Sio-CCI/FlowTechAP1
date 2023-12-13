@@ -12,6 +12,19 @@
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css" />
 	</head>
 	<body class="bg-dark">
+		<!-- MODAL INFORMATION PROJETS -->
+		<div class="modal fade bg-dark bg-opacity-75" id="modalInformations" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content bg-dark text-light border-flowtech">
+					<div class="modal-header border-flowtech">
+						<h1 class="modal-title fs-5" id="exampleModalLabel">Attention</h1>
+						<button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body border-flowtech">Ce site à été créé dans le cadre d'un projet en classe de première année de BTS SIO. Le contenu que vous trouverez ici vient principalement du site <a href="https://www.flowup.shop/" class="link-flowtech">Flowup</a></div>
+				</div>
+			</div>
+		</div>
+		<!-- HEADER -->
 		<header class="header-index">
 			<nav class="navbar navbar-expand-lg bg-flowtech">
 				<div class="container-fluid">
@@ -146,5 +159,11 @@
 			</footer>
 		</div>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+		<script>
+			window.onload = function () {
+				var myModal = new bootstrap.Modal(document.getElementById("modalInformations"));
+				myModal.show();
+			};
+		</script>
 	</body>
 </html>
