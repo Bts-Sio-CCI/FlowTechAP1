@@ -159,3 +159,78 @@ $theme-colors: map-merge($custom-theme-colors, $theme-colors);
 }
 
 //rajouter un effet de mouvement sur les cartes du shop + couleur qui change
+
+// NEIGE
+/* Définition des variables, assurez-vous que ces variables sont définies ou déclarez-les si elles ne le sont pas */
+$d: 70; /* densité */
+$w: 600; /* taille de la grille */
+$s: 5s; /* vitesse */
+
+/* Génération de l'effet de neige en utilisant des gradients radiaux */
+$grad: ();
+@for $i from 0 to $d {
+	$v: random(4) + 2;
+	$a: random(5) * 0.1 + 0.5;
+	$grad: $grad, radial-gradient($v + px $v + px at (random($w - $v * 2) + $v) + px (random($w - $v * 2) + $v) + px, rgba(255, 255, 255, $a) 50%, rgba(0, 0, 0, 0)) !global;
+}
+
+/* Application de l'effet de neige aux éléments avec la classe .snow-header */
+/* Définition des variables, assurez-vous que ces variables sont définies ou déclarez-les si elles ne le sont pas */
+$d: 70; /* densité */
+$w: 600; /* taille de la grille */
+$s: 5s; /* vitesse */
+
+/* Génération de l'effet de neige en utilisant des gradients radiaux */
+$grad: ();
+@for $i from 0 to $d {
+	$v: random(4) + 2;
+	$a: random(5) * 0.1 + 0.5;
+	$grad: $grad, radial-gradient($v + px $v + px at (random($w - $v * 2) + $v) + px (random($w - $v * 2) + $v) + px, rgba(255, 255, 255, $a) 50%, rgba(0, 0, 0, 0)) !global;
+}
+
+/* Application de l'effet de neige aux éléments avec la classe .snow-header */
+.snow-header {
+	position: relative;
+	overflow: hidden; /* Assurez-vous que le contenu ne déborde pas du header */
+}
+
+/* Application de l'effet de neige aux pseudo-éléments */
+.snow-header:before,
+.snow-header:after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: "";
+	pointer-events: none; /* Assurez-vous que les pseudo-éléments ne captent pas les événements de souris */
+	z-index: 1; /* Placez l'effet au-dessus du contenu */
+	width: 100%;
+	height: 100%;
+	background-image: $grad;
+	background-size: $w + px $w + px;
+	animation: snow $s linear infinite;
+}
+
+.snow-header:after {
+	margin-left: -$w/3 + px;
+	opacity: 0.4;
+	animation-duration: $s * 2;
+	// animation-direction: reverse;
+	filter: blur(3px);
+}
+
+.snow-header:before {
+	animation-duration: $s * 3;
+	// animation-direction: reverse;
+	margin-left: -$w/2 + px;
+	opacity: 0.65;
+	filter: blur(1.5px);
+}
+
+@keyframes snow {
+	from {
+		transform: translateY(-$w + px); /* Changer la direction de la translation */
+	}
+	to {
+		transform: translateY(100vh); /* La neige descend jusqu'au bas de l'écran (vous pouvez ajuster cela selon vos besoins) */
+	}
+}
