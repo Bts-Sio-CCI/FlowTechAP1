@@ -37,18 +37,21 @@ function getDetailsProduit(identifiantProduit) {
 	// Pour simplifier, vous pouvez coder en dur les détails ou les récupérer depuis un serveur
 	switch (identifiantProduit) {
 		case "pc1":
-			return { nom: "PC RTX 4070ti", prix: 1949.0 };
-		// Ajoutez des cas similaires pour les autres produits
+			return { nom: "PC Savana", prix: 1949.0 };
 		case "pc2":
-			return { nom: "PC RTX 4050", prix: 1399.99 };
+			return { nom: "PC Kraken", prix: 1399.99 };
 		case "pc3":
-			return { nom: "PC RTX 4060ti", prix: 1499.99 };
+			return { nom: "PC Atlas", prix: 1499.99 };
 		case "pc4":
-			return { nom: "PC RTX 4090", prix: 5999.99 };
+			return { nom: "PC Fractal-North", prix: 1899.99 };
 		case "pc5":
-			return { nom: "PC RTX 3070", prix: 1199.99 };
+			return { nom: "PC Tracer", prix: 5999.99 };
 		case "pc6":
-			return { nom: "PC RTX 3080", prix: 1349.99 };
+			return { nom: "PC Freezer", prix: 2999.99 };
+		case "pc7":
+			return { nom: "PC Orion", prix: 1199.99 };
+		case "pc8":
+			return { nom: "PC Omega", prix: 1349.0 };
 		default:
 			return { nom: "Produit inconnu", prix: 0.0 };
 	}
