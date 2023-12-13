@@ -12087,4 +12087,9 @@ textarea.form-control-lg {
   text-decoration: underline;
 }
 
+.dropdown-item:hover {
+  background-color: #6c757d;
+  color: #1e1e1e;
+}
+
 /*# sourceMappingURL=custom.css.map */

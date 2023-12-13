@@ -159,3 +159,8 @@ $theme-colors: map-merge($custom-theme-colors, $theme-colors);
 }
 
 //rajouter un effet de mouvement sur les cartes du shop + couleur qui change
+
+.dropdown-item:hover {
+	background-color: $secondary;
+	color: $dark;
+}
