@@ -24,6 +24,16 @@
 				</div>
 			</div>
 		</div>
+		<!-- OFFCANVA CALENDAR -->
+		<div class="offcanvas offcanvas-start bg-dark" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+			<div class="offcanvas-header">
+				<h5 class="offcanvas-title text-light" id="offcanvasExampleLabel">Calendrier</h5>
+				<button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+			</div>
+			<div class="offcanvas-body">
+				<iframe class="w-100 h-100" src="https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%23ffb525&ctz=Europe%2FParis&showTitle=0&showDate=0&showPrint=0&showTabs=0&showTz=0&showCalendars=0&src=MDc3ZmE4OGNlZWEzY2JhNTdlOGU2MTg5Y2FkZDdmMWY5Zjc4ZDE4N2IyZGViYWQzNmIzNjI2ZWIxYWEzYWI3NEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23F09300" style="border: solid 1px #777" frameborder="0" scrolling="no"></iframe>
+			</div>
+		</div>
 		<!-- HEADER -->
 		<header class="header-index">
 			<nav class="navbar navbar-expand-lg bg-flowtech">
@@ -49,36 +59,30 @@
 								<li class="nav-item m-1">
 									<a class="btn btn-dark fw-bold text-light shadow" href="/pages/shop.html">Magasin</a>
 								</li>
+								<li class="nav-item m-1">
+									<button class="btn btn-dark fw-bold text-light shadow" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"><i class="bi bi-calendar"></i></button>
+								</li>
+								<li class="nav-item m-1">
+									<div class="dropdown">
+										<button class="btn btn-dark shadow dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-person-fill"></i></button>
+										<ul class="dropdown-menu dropdown-menu-end bg-dark bg-opacity-80 border-dark mt-2">
+											<li>
+												<a class="dropdown-item text-light text-bold" href="/pages/panier.html"><i class="bi bi-cart-fill mx-2"></i>Panier</a>
+											</li>
+											<li>
+												<a class="dropdown-item text-light text-bold" href="#"><i class="bi bi-person-circle mx-2"></i>Profile</a>
+											</li>
+											<li>
+												<a class="dropdown-item text-light text-bold" href="#"><i class="bi bi-box-arrow-in-right mx-2"></i>Se connecter</a>
+											</li>
+											<li>
+												<a class="dropdown-item text-light text-bold" href="#"><i class="bi bi-box-arrow-in-left mx-2"></i>Se déconnecter</a>
+											</li>
+										</ul>
+									</div>
+								</li>
 							</ul>
 						</div>
-						<div class="dropdown m-1">
-							<button class="btn btn-dark shadow dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-person-fill"></i></button>
-							<ul class="dropdown-menu dropdown-menu-end bg-dark bg-opacity-80 border-dark mt-2">
-								<li>
-									<a class="dropdown-item text-light text-bold" href="/pages/panier.html"><i class="bi bi-cart-fill mx-2"></i>Panier</a>
-								</li>
-								<li>
-									<a class="dropdown-item text-light text-bold" href="#"><i class="bi bi-person-circle mx-2"></i>Profile</a>
-								</li>
-								<li>
-									<a class="dropdown-item text-light text-bold" href="#"><i class="bi bi-box-arrow-in-right mx-2"></i>Se connecter</a>
-								</li>
-								<li>
-									<a class="dropdown-item text-light text-bold" href="#"><i class="bi bi-box-arrow-in-left mx-2"></i>Se déconnecter</a>
-								</li>
-							</ul>
-						</div>
-						<!-- <div class="dropdown mt-2">
-							<a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-								<img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle" />
-							</a>
-							<ul class="dropdown-menu text-small dropdown-menu-end bg-dark bg-opacity-80 border-dark">
-								<li><a class="dropdown-item text-light text-bold" href="#">New project...</a></li>
-								<li><a class="dropdown-item text-light text-bold" href="#">Settings</a></li>
-								<li><a class="dropdown-item text-light text-bold" href="#">Profile</a></li>
-								<li><a class="dropdown-item text-light text-bold" href="#">Sign out</a></li>
-							</ul>
-						</div> -->
 					</div>
 				</div>
 			</nav>
