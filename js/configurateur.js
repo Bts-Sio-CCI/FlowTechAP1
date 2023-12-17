@@ -21,5 +21,4 @@ function calculerEtAfficherTotal() {
 	afficherResultat.textContent = "Prix total : " + total + " euros";
 }
 
-// Écouteurs d'événements sur les champs du formulaire
 formulaire.addEventListener("input", calculerEtAfficherTotal);
