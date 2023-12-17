@@ -144,7 +144,11 @@ function supprimerArticle(index) {
 }
 // Ajoutez ceci à votre fonction de confirmation de commande (ajouterAuPanier par exemple)
 function confirmerCommande() {
-	// ... (votre code existant)
+	// Récupérez le prix total depuis le résultat du configurateur
+	var prixTotal = parseFloat(document.getElementById("resultat").textContent.split(":")[1]) || 0;
+
+	// Ajoutez le PC custom au panier avec le prix total
+	ajouterAuPanierCustom(prixTotal);
 
 	// Affichez un popup de confirmation
 	var confirmation = confirm("Confirmer la commande ?");
@@ -200,4 +204,40 @@ function afficherDetailsCommande() {
 
 	// Affichez le sous-total dans la page de confirmation
 	confirmationSubtotal.innerHTML = sousTotal.toFixed(2);
+}
+
+function ajouterAuPanierCustom(prixTotal) {
+	// Obtenez les articles du panier existants depuis localStorage
+	var articlesPanier = localStorage.getItem("articlesPanier");
+	articlesPanier = articlesPanier ? JSON.parse(articlesPanier) : [];
+
+	// Ajoutez le PC custom au panier
+	articlesPanier.push({
+		id: "pc_custom", // Vous pouvez définir un identifiant unique pour le PC custom
+		nom: "PC custom",
+		prix: prixTotal,
+		quantite: 1,
+	});
+
+	// Enregistrez les articles mis à jour dans localStorage
+	localStorage.setItem("articlesPanier", JSON.stringify(articlesPanier));
+
+	// Mettez à jour l'affichage du panier
+	afficherArticlesPanier();
+}
+
+function ajouterAuPanierCustomFromConfigurator() {
+	// Récupérez le prix total depuis le résultat du configurateur
+	var prixTotal = parseFloat(document.getElementById("resultat").textContent.split(":")[1]) || 0;
+
+	// Ajoutez le PC custom au panier avec le prix total
+	ajouterAuPanierCustom(prixTotal);
+
+	// Affichez un popup de confirmation ou effectuez d'autres actions si nécessaire
+	var confirmation = confirm("Confirmer l'ajout au panier ?");
+
+	if (confirmation) {
+		// Votre logique ici, par exemple, rediriger l'utilisateur ou effectuer d'autres actions
+		window.location.href = "../pages/confirmation.html";
+	}
 }
