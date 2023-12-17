@@ -90,7 +90,7 @@ function afficherArticlesPanier() {
 
 		// Ajoutez un bouton de suppression avec un gestionnaire d'événements
 		var boutonSupprimer = document.createElement("button");
-		boutonSupprimer.innerHTML = "Supprimer";
+		boutonSupprimer.innerHTML = "-";
 		boutonSupprimer.className = "btn btn-danger btn-sm";
 		boutonSupprimer.addEventListener("click", function () {
 			supprimerArticle(index);
