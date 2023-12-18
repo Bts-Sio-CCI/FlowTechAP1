@@ -133,25 +133,27 @@ if (isset($_POST['submit'])) { // Verifie que le bouton submit soit cliqué
 						</div>
 					</div>
 
-					<!-- Mot de passe -->
+                    <!-- Numéro de téléphone -->
 					<div class="row">
 						<div class="col">
 							<div class="form-floating mb-3">
-								<input type="password" class="form-control" id="passwd" placeholder="6mi5q9rvYrl&Rx4v" name="passwd" />
-								<label for="passwd">Mot de passe</label>
+								<input type="number" class="form-control" id="telephone" placeholder="0769581707" name="telephone" />
+								<label for="nbcig">Numéro de téléphone</label>
 							</div>
 						</div>
 					</div>
 
-					<!-- Nombre de cigarettes consommés quotidiennement -->
+					<!-- Mot de passe -->
 					<div class="row">
 						<div class="col">
 							<div class="form-floating mb-3">
-								<input type="number" class="form-control" id="nbcig" placeholder="22" name="nbcig" />
-								<label for="nbcig">Nombre de cigarettes consommés quotidiennement</label>
+								<input type="password" class="form-control" id="motdepasse" placeholder="6mi5q9rvYrl&Rx4v" name="motdepasse" />
+								<label for="motdepasse">Mot de passe</label>
 							</div>
 						</div>
 					</div>
+
+					
 
 					<!-- Bouton de connexion -->
 					<button type="submit" name="submit" id="submit" value="REGISTER" class="btn btn-lg btn-primary w-100"><i class="fas fa-arrow-right me-2"></i>S'inscrire</button>
