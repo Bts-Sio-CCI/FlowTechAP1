@@ -13,6 +13,19 @@ $custom-theme-colors: (
 	//"gris": #1e1e1e,
 );
 
+body::-webkit-scrollbar {
+	width: 5px; /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+	background: $dark; /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+	border-radius: 10px; /* roundness of the scroll thumb */
+	border: 3px solid $flowtech; /* creates padding around scroll thumb */
+}
+
 $theme-colors: map-merge($custom-theme-colors, $theme-colors);
 
 @import "../node_modules/bootstrap/scss/bootstrap";
