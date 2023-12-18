@@ -38,8 +38,8 @@ if (isset($_POST['submit'])) { // Verifie que le bouton submit soit cliqué
 
     // Identifiants BDD
     $servername = "nc231.myd.infomaniak.com";
-    $username = "nc231_flowtech";
-    $password = "Flowtech123";
+    $username = "nc231_lucas";
+    $password = "Lucas123";
     $dbname = "nc231_flowtech";
 
     // Connection à la BDD avec les identifiants définis précédemment
@@ -112,13 +112,6 @@ if (isset($_POST['submit'])) { // Verifie que le bouton submit soit cliqué
 							<div class="form-floating mb-3">
 								<input type="text" class="form-control" id="nom" placeholder="Doe" name="nom" />
 								<label for="nom">Nom</label>
-							</div>
-						</div>
-						<!-- Age -->
-						<div class="col">
-							<div class="form-floating mb-3">
-								<input type="number" class="form-control" id="age" placeholder="34" name="age" />
-								<label for="age">Âge</label>
 							</div>
 						</div>
 					</div>
