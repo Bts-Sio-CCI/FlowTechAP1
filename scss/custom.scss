@@ -164,3 +164,12 @@ $theme-colors: map-merge($custom-theme-colors, $theme-colors);
 	background-color: $secondary;
 	color: $dark;
 }
+
+.equal-height-cards [class*="col-"] {
+	display: flex;
+	flex-direction: column;
+}
+
+.equal-height-cards .card {
+	flex: 1;
+}

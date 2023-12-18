@@ -12092,4 +12092,13 @@ textarea.form-control-lg {
   color: #1e1e1e;
 }
 
+.equal-height-cards [class*=col-] {
+  display: flex;
+  flex-direction: column;
+}
+
+.equal-height-cards .card {
+  flex: 1;
+}
+
 /*# sourceMappingURL=custom.css.map */
