@@ -1,11 +1,24 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee&display=swap");
+body::-webkit-scrollbar {
+  width: 5px; /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: #1e1e1e; /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px; /* roundness of the scroll thumb */
+  border: 3px solid #ffb525; /* creates padding around scroll thumb */
+}
+
 /*!
  * Bootstrap  v5.3.2 (https://getbootstrap.com/)
  * Copyright 2011-2023 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Bungee&display=swap");
 :root,
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;
