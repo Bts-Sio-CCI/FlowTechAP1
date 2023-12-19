@@ -87,6 +87,14 @@
 				</div>
 			</nav>
 			<div class="header-gradient container">
+				<?php if(isset($_GET['success']) && $_GET['success'] == 1) { ?>
+				<div class="container pt-5 w-50">
+					<div class="alert alert-success alert-dismissible fade show" role="alert">
+						<strong>Message envoyé!</strong> Je vous répondrai dès que possible.
+						<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+					</div>
+				</div>
+				<?php } ?>
 				<div class="row align-items-center g-5 m-0">
 					<div class="col-12 col-lg-6">
 						<img src="/img/rainbox-geforce-rtx.png" class="pp d-block mx-lg-auto img-fluid rounded-5" alt="Bootstrap Themes" width="400" height="400" loading="lazy" />
@@ -144,6 +152,31 @@
 						<h4 class="text-light"><i class="bi-envelope mx-2 text-flowtech"></i>Mail</h4>
 						<a class="text-light mx-5" href="mailto:contact@flowtech-sio.fr">contact@flowtech-sio.fr</a>
 					</div>
+				</div>
+				<div class="row py-3">
+					<form method="post" action="php/contact.php">
+						<div class="row">
+							<div class="col-md-6">
+								<label for="nom" class="form-label text-light fw-bold mt-2">Nom</label>
+								<input type="text" class="form-control bg-dark border-2 border-flowtech text-light" id="nom" name="nom" required />
+							</div>
+							<div class="col-md-6">
+								<label for="email" class="form-label text-light fw-bold mt-2">Email</label>
+								<input type="email" class="form-control bg-dark border-2 border-flowtech text-light" id="email" name="email" required />
+							</div>
+							<div class="col-12">
+								<label for="sujet" class="form-label text-light fw-bold mt-2">Sujet</label>
+								<input type="text" class="form-control bg-dark border-2 border-flowtech text-light" id="sujet" name="sujet" required />
+							</div>
+							<div class="col-12">
+								<label for="message" class="form-label text-light fw-bold mt-2">Message</label>
+								<textarea class="form-control bg-dark border-2 border-flowtech text-light" id="message" rows="3" name="message" required></textarea>
+							</div>
+							<div class="col-12 mt-3">
+								<button type="submit" class="btn btn-outline-flowtech border-2 fw-bold" id="envoyer" name="envoyer">Envoyer</button>
+							</div>
+						</div>
+					</form>
 				</div>
 			</div>
 		</section>
