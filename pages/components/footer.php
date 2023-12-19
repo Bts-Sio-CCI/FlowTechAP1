@@ -5,7 +5,7 @@
 				<img width="50" height="50" src="/img/logos/logo-min-rounded.png" alt="Logo footer" />
 			</a>
 			<p class="text-light">Copyright FlowTech © 2023</p>
-			<a href="/pages/legal.html" class="nav-link text-light">Mentions légales</a>
+			<a href="/pages/legal.php" class="nav-link text-light">Mentions légales</a>
 		</div>
 		<div class="col my-3"></div>
 		<div class="col my-3"></div>
@@ -17,10 +17,10 @@
 					<a href="/index.php" class="nav-link p-0 text-light">Accueil</a>
 				</li>
 				<li class="nav-item mb-2">
-					<a href="/pages/shop.html" class="nav-link p-0 text-light">Magasin</a>
+					<a href="/pages/shop.php" class="nav-link p-0 text-light">Magasin</a>
 				</li>
 				<li class="nav-item mb-2">
-					<a href="/pages/configurateur.html" class="nav-link p-0 text-light">Configurateur</a>
+					<a href="/pages/configurateur.php" class="nav-link p-0 text-light">Configurateur</a>
 				</li>
 			</ul>
 		</div>
@@ -29,10 +29,10 @@
 			<h5 class="fw-bold">Ressources</h5>
 			<ul class="nav flex-column">
 				<li class="nav-item mb-2">
-					<a href="/pages/faq.html" class="nav-link p-0 text-light">FAQ</a>
+					<a href="/pages/faq.php" class="nav-link p-0 text-light">FAQ</a>
 				</li>
 				<li class="nav-item mb-2">
-					<a href="/pages/clause.html" class="nav-link p-0 text-light">Clause de confidentialité</a>
+					<a href="/pages/clause.php" class="nav-link p-0 text-light">Clause de confidentialité</a>
 				</li>
 			</ul>
 		</div>
