@@ -105,7 +105,7 @@
 					</div>
 				</div>
 				<div class="row py-3">
-					<form method="post" action="php/contact.php">
+					<form method="post" action="script/contact.php">
 						<div class="row">
 							<div class="col-md-6">
 								<label for="nom" class="form-label text-light fw-bold mt-2">Nom</label>
