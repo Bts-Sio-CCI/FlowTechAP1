@@ -70,7 +70,7 @@
 												<a class="dropdown-item text-light text-bold" href="/pages/panier.html"><i class="bi bi-cart-fill mx-2"></i>Panier</a>
 											</li>
 											<li>
-												<a class="dropdown-item text-light text-bold" href="#"><i class="bi bi-person-circle mx-2"></i>Profile</a>
+												<a class="dropdown-item text-light text-bold" href="/pages/profile.html"><i class="bi bi-person-circle mx-2"></i>Profile</a>
 											</li>
 											<li>
 												<a class="dropdown-item text-light text-bold" href="#"><i class="bi bi-box-arrow-in-right mx-2"></i>Se connecter</a>
