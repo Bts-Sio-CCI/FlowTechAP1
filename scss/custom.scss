@@ -177,3 +177,8 @@ $theme-colors: map-merge($custom-theme-colors, $theme-colors);
 	background-color: $secondary;
 	color: $dark;
 }
+
+.form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+	color: $light;
+	opacity: 1; /* Firefox */
+}
