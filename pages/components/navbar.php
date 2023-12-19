@@ -10,7 +10,7 @@
 					<a class="nav-link" href="/index.html#services">Nos services</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="/index.html#contact">Contact</a>
+					<a class="nav-link" href="/index.php#contact">Contact</a>
 				</li>
 			</ul>
 			<div class="d-flex" role="search">

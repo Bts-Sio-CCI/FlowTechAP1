@@ -14,7 +14,7 @@
 			<h5 class="fw-bold text-flowtech">Pages</h5>
 			<ul class="nav flex-column">
 				<li class="nav-item mb-2">
-					<a href="/index.html" class="nav-link p-0 text-light">Accueil</a>
+					<a href="/index.php" class="nav-link p-0 text-light">Accueil</a>
 				</li>
 				<li class="nav-item mb-2">
 					<a href="/pages/shop.html" class="nav-link p-0 text-light">Magasin</a>
