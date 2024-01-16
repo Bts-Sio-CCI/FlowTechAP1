@@ -12105,9 +12105,9 @@ textarea.form-control-lg {
   color: #1e1e1e;
 }
 
-.form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #efefef;
-  opacity: 1; /* Firefox */
+.form-control::placeholder {
+  /* Changer la couleur du texte du placeholder */
+  color: red; /* Remplacez "red" par la couleur souhaitée */
 }
 
 /*# sourceMappingURL=custom.css.map */

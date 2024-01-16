@@ -88,7 +88,7 @@ if (isset($_POST['submit'])) { // Verifie que le bouton submit soit cliqué
 	<meta name="description" content="FlowTech, surement les meilleurs PC du marché!" />
 	<link rel="icon" type="image/x-icon" href="/img/logos/logo-min-rounded.png" />
 	<!-- CSS CUSTOM + BOOTSTRAP -->
-	<link href="/css/custom.css" rel="stylesheet" />
+	<link href="../css/custom.css" rel="stylesheet" />
 	<!-- BOOTSTRAP ICONS-->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css" />
 </head>
@@ -104,7 +104,7 @@ if (isset($_POST['submit'])) { // Verifie que le bouton submit soit cliqué
 					<!-- Prénom -->
 					<div class="col">
 						<div class="form-floating">
-							<input type="text" class="form-control rounded-4 border-flowtech border-3 p-3 bg-dark text-light" id="prenom" placeholder="John" name="prenom" />
+							<input type="text" class="form-control rounded-4 border-flowtech border-3 p-3 text-light bg-dark" id="prenom" placeholder="John" name="prenom" />
 						</div>
 					</div>
 					<!-- Nom -->

@@ -178,7 +178,8 @@ $theme-colors: map-merge($custom-theme-colors, $theme-colors);
 	color: $dark;
 }
 
-.form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-	color: $light;
-	opacity: 1; /* Firefox */
-}
+.form-control::placeholder {
+	/* Changer la couleur du texte du placeholder */
+	color: red; /* Remplacez "red" par la couleur souhaitée */
+  }
+  
